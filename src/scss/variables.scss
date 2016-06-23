@@ -1,0 +1,40 @@
+//Container
+$container-max-width: 960px;
+$container-min-width: 320px;
+
+// Breakpoint
+$xs-screen: 	320px;
+$sm-screen: 	700px;
+$md-screen: 	970px;
+$lg-screen:		1200px;	
+$xl-screen: 	1440px;
+
+//Prime colors
+//$blue: 			#81b3d2; 283645
+$navy-blue: 	#283645;
+$white:			#ffffff;
+$black:			#000000;
+$grey: 			#f2f2f2;
+$pink:			#d22856;
+$body-bg: 		#ffffff;
+
+//Typography
+	//Base typography kit
+$ff-sans-serif: 	'Open Sans', Helvetica, Arial, sans-serif;
+$ff-base: 			$ff-sans-serif;
+$fz-base: 			14px;
+$fc-base: 			#000;
+$lh-base: 			1.5;
+$tt-base: 			uppercase;
+	//Typography font-size
+$fz-text: 		$fz-base; 				//14px
+	//Typography font-weight
+$fw-narrow:		300;					//light
+$fw-normal: 	400;					//normal
+$fw-bold: 		700;					//bold
+	//Additional typography
+$ff-wisdom: 	'Conv_Wisdom Script';
+$fz-wisdom: 	36px;
+
+$ff-zeronero: 'Conv_zeronero';
+$fz-zeronero: 115px;

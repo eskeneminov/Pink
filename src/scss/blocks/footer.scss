@@ -1,0 +1,242 @@
+.footer__wrap{
+	padding-top: 40px;
+}
+.footer__info{
+	position: relative;
+	&:after{
+		content: "";
+		position: absolute;
+		display: block;
+		height: 50px;
+		width: 100%;
+		background-image: url('../img/triangle_1440px.png');
+		background-size: 100% 100%;
+		z-index: 100;
+	}
+}
+.footer__map{
+
+}
+.footer__links{
+	display: none;
+}
+.info-footer{
+	@include container($container-max-width);
+	text-align: center;
+
+	&__title{
+		@include span(full);
+		font-size: 24px;
+		font-weight: $fw-narrow;
+		margin-bottom: 40px;
+	}
+	&__caption{
+		font-size: 24px;
+		font-weight: $fw-narrow;
+		margin: 0;		
+	}
+	&__phone{
+		@include span(full);
+		font-size: 18px;
+		font-weight: $fw-bold;
+		margin-bottom: 20px;
+	}
+	&__mail{
+		@include span(full);
+		@extend .info-footer__phone;
+	}
+	&__address{
+		@include span(full);
+		@extend .info-footer__phone;
+	}
+	&__phone span, &__mail span, &__address span{
+		display: block;
+		font-size: 20px;
+		font-weight: $fw-narrow;
+		color: $pink
+	}
+}
+.footer__map{
+
+}
+.google-map{
+	width: 100%;
+	height: 300px;
+}
+
+@include susy-breakpoint($sm-screen, 8){
+	.footer__info{
+		&:after{
+			height: 70px;
+		}
+	}
+	.info-footer{
+	
+		&__caption{
+			font-size: 40px;
+			line-height: 48px;
+		}
+		&__phone{
+			@include span(4);
+			@include pad(1);
+			white-space: nowrap;
+	
+		}
+		&__mail{
+			@include span(4);
+			@include pad(1);
+		}
+		&__address{
+			@include span(8);
+		}
+		&__phone span, &__mail span, &__address span{
+	
+		}
+	}
+	.google-map{
+		width: 100%;
+		height: 380px;
+	}
+	.footer__links{
+		display: block;
+	}
+	.footer-links{
+		@include makeContainer();
+		font-size: 0;
+		padding-top: 36px;
+		padding-bottom: 36px;
+
+		&__pink{
+			display: inline-block;
+			vertical-align: middle;
+			width: 31.333%;
+			margin-left: 20px;
+		}
+		&__socials{
+			@extend .footer-links__pink;
+			margin-left: 0;
+		}
+		&__copyright{
+			@extend .footer-links__pink;
+			font-size: 14px;
+			line-height: 18px;
+			margin-left: 0;
+			margin-right: 20px;
+		}
+		&__pink-link{
+			display: block;
+			width: 150px;
+			height: 46px;
+			background-image: url('../img/spritesheet.png');
+			background-position: -190px -8px;
+		}
+	}
+	.footer-socials{
+		font-size: 0;
+		text-align: center;
+		
+		&__item{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+		&__item_tw &__link{
+			background-position: -157px -54px;
+		}
+		&__item_fb &__link{
+			background-position: -145px 3px;
+		}
+		&__item_youtube &__link{
+			background-position: -257px -54px;
+		}
+		&__link{
+			display: block;
+			height: 50px;
+			width: 50px;
+			border: 2px  solid #e9ebec;
+			border-radius: 25px;
+			background-image: url('../img/spritesheet.png');
+		}
+		&__link:hover{
+			border-color: $navy-blue;
+		}
+		&__link:active{
+			opacity: 0.5;
+		}
+	}
+	.footer-copyright{
+		text-align: right;
+
+		& span{
+			display: inline-block;
+			margin-left: 5px;
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+		&__a{
+			display: inline-block;
+			vertical-align: top;
+			width: 26px;
+			height: 40px;
+			background-image: url('../img/spritesheet.png');
+			background-position: -10px -8px;
+		}
+		&__htmlacademy{
+			display: inline-block;
+			vertical-align: top;
+			width: 26px;
+			height: 40px;
+			background-image: url('../img/spritesheet.png');
+			background-position: -56px -10px;
+		}
+	}
+}
+
+@include susy-breakpoint($md-screen, 12){
+
+	.footer__info{
+
+		&:after{
+			height: 90px;
+		}
+	}	
+	.info-footer{
+	
+		&__caption{
+			@include span(full);
+		}
+		&__phone{
+			@include span(4);
+			@include pad(1);
+	
+		}
+		&__mail{
+			@include span(4);
+			@include pad(1);
+			@include last();
+		}
+		&__address{
+			@include span(4);
+		}
+		&__phone span, &__mail span, &__address span{
+	
+		}
+	}
+	.google-map{
+		width: 100%;
+		height: 520px;
+	}
+	.footer__info{
+
+		&:after{
+			height: 100px;
+		}
+	}
+
+}
+
+
+
+
+
+

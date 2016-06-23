@@ -1,0 +1,184 @@
+.main__wrap{
+	overflow-x: hidden;
+}
+
+.main-title__wrap{
+	max-width: $container-max-width;
+	min-width: $container-min-width;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+.main-title{
+	text-align: center;
+
+	&__caption{
+		font-size: 24px;
+		line-height: 1.2;
+		font-weight: $fw-narrow;
+		margin: 0;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		color: $navy-blue;
+	}
+}
+.main__features{
+	position: relative;
+	margin-top: 120px;
+	background: $grey;
+	border-top: 1px solid transparent;
+
+	&:before{
+		content: '';
+		position: absolute;
+		top: -60px;
+		display: block;
+		height: 100px;
+		width: 110%;
+		transform: rotate(-4.5deg);
+		background: $grey;
+		z-index: -100;
+	}
+}
+.features{
+	@include container($container-max-width);
+	
+	&__item{
+		@include span(full);
+	}
+	&__mob-img{
+		@include span(full);
+		text-align: center;
+	}
+}
+.feature{
+	text-align: center;
+
+	&__img{
+		display: none;
+	}
+	&__title{
+		margin-bottom: 10px;
+		font-size: 18px;
+		font-weight: $fw-bold;
+		color: $navy-blue;
+		line-height: 24px;
+	}
+	&__description{
+		font-size: 14px;
+		font-weight: 24px;
+		color: $navy-blue;
+		margin-bottom: 30px;
+	}
+}
+
+//Breakpoint 700px
+@include susy-breakpoint($sm-screen, 8){
+	.main-title{
+
+		&__caption{
+			font-size: 40px;
+			& span{
+				display: block;
+			}
+		}
+	}
+	.main__features{
+		margin-top: 135px;
+	}
+	.features{
+	margin-top: -100px;	
+		&__item{
+			@include span(4 last);
+			padding-top: 70px;
+		}
+		&__mob-img{
+			@include span(4 first);
+			@include suffix(3%);
+			text-align: right;
+		}
+	}
+	.feature{
+		margin-right: 10px;
+
+		&__img{
+			display: none;
+		}
+		&__title{
+			font-weight: $fw-bold;
+			text-align: left;
+		}
+		&__description{
+			text-align: left;
+			font-size: 14px;
+			font-weight: 24px;
+			color: $navy-blue;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+//Breakpoint 970px
+@include susy-breakpoint($md-screen, 12){
+	.main-title{
+
+		&__caption{
+			font-size: 40px;
+		}
+	}
+	.main__features{
+		margin-top: 180px;
+
+		&:before{
+			transform: rotate(-3deg);
+			height: 200px;
+		}
+	}
+	.features{
+		@include container($container-max-width);
+		margin-top: -120px;
+
+		&__item{
+			@include span(12);
+			padding-top: 0;
+		}
+		&__mob-img{
+			display: none;
+		}
+	}
+
+	.feature{
+		@include span(4);
+		margin-right: 0;
+
+		&__img{
+			display: block;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		&__title{
+			margin-bottom: 20px;
+			font-size: 30px;
+			font-weight: $fw-bold;
+			line-height: 30px;
+			text-align: center;
+		}
+		&__description{
+			text-align: center;
+			font-size: 18px;
+			line-height: 30px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}		
+	}
+}
+
+//Breakpoint 1200px
+@include susy-breakpoint($lg-screen, 12){
+	.main-title{
+
+		&__caption{
+			font-size: 50px;
+		}
+	}
+}

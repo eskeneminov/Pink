@@ -1,0 +1,195 @@
+.intro__wrap{
+	position: relative;
+	height: 730px;
+	background-color: $navy-blue;
+	@include makeBgRetina('bg_xs-1x.jpg', 'bg_xs-2x.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 0;
+}
+.intro{
+	@include container($container-max-width);
+	@include makeBgRetina('bg-hand_xs-1x.png', 'bg-hand_xs-2x.png');
+	height: 100%;
+	padding-top: 70px;
+	color: $white;
+	background-size: 320px 313px;
+	background-repeat: no-repeat;
+	background-position: 0 170px;
+
+	&__title{
+		@include span(full);
+	}
+	&__caption{
+		text-align: center;
+		font-size: 24px;
+		font-weight: $fw-narrow;
+		color: $white;
+		line-height: 1;
+	}
+	&__download{
+		@include span(full);
+		height: 270px;
+		position: absolute;
+		bottom: 0;
+		background: $navy-blue;
+	}
+}
+.download{
+
+	&__oc{
+		margin-bottom: 25px;
+	}
+	&__button{
+		margin-top: 25px;
+		margin-bottom: 25px;
+		
+	}
+	&__description{
+		width: 242px;
+		margin: 0 auto;
+	}
+	&__link{
+		display: block;
+		margin: 0 auto;
+		width: 280px;
+		color: $white;
+		font-size: 18px;
+		font-weight: $fw-bold;
+		text-align: center;
+		border: 3px solid $white;
+		border-radius: 30px;
+		padding-bottom: 12px;
+		padding-top: 12px;
+	}
+	&__link:hover{
+		background: $white;
+		color: $pink;
+	}
+}
+.oc{
+	margin: 0 auto;
+	width: 230px;
+
+	&__apple{
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		margin-right: 20px;
+		background-image: url(../img/apple-logo.svg);
+		background-repeat: no-repeat;
+	}
+	&__android{
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		margin-right: 20px;
+		background-image: url(../img/android-logo.svg);
+		background-repeat: no-repeat;
+		background-position: 0 10px;
+	}
+	&__win{
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		background-image: url(../img/microsoft-logo.svg);
+		background-repeat: no-repeat;
+		background-position: 0 10px;
+	}		
+}
+//700px breakpoint
+@include susy-breakpoint($sm-screen, 8){
+	.intro__wrap{
+		height: 730px;
+		@include makeBgRetina('bg_sm-1x.jpg', 'bg_sm-2x.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 0;
+	}
+	.intro{
+		padding-top: 210px;
+		color: $white;
+		@include makeBgRetina('bg-hand_sm-1x.png', 'bg-hand_sm-2x.png');
+		background-size: 700px 545px;
+		background-position: 9% 100%;
+		
+		&__title{
+			@include span(4);
+			padding-bottom: 30px;
+		}
+		&__caption{
+			font-size: 40px;
+			width: 240px;
+			line-height: normal;
+			margin-left: 30px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		&__download{
+			position: relative;
+			@include span(4 break);
+			background: none;
+		}
+	}
+	.download{
+		width: 300px;
+		margin-left: 10px;
+
+		&__description{
+			font-size: 18px;
+			font-weight: $fw-narrow;
+			width: 100%;
+			text-align: center;
+		}
+		&__button{
+			margin-top: 0;
+			margin-bottom: 40px;
+		}
+		&__link{
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+}
+// 970px breakpoint
+@include susy-breakpoint($md-screen, 12){
+	.intro__wrap{
+		height: 854px;
+		@include makeBgRetina('bg_md-1x.jpg', 'bg_md-2x.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 0;
+	}
+	.intro{
+		@include makeBgRetina('bg-hand_md-1x.png', 'bg-hand_md-2x.png');
+		background-size: 1050px 645px;
+		background-position: 0% 100%;
+		&__title{
+			
+		}
+		&__caption{
+			font-size: 50px;
+			margin-left: 40px;
+		}
+		&__download{
+			position: relative;
+		}
+	}		
+}
+//1440px breakpoint
+@include susy-breakpoint($xl-screen, 12){
+	.intro__wrap{
+		@include makeBgRetina('bg_lg-1x.jpg', 'bg_lg-2x.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 0;
+	}
+	.intro{
+		@include makeBgRetina('bg-hand_lg-1x.png', 'bg-hand_lg-2x.png');
+		background-position: -30% 100%;
+		
+		&__download{
+			position: relative;
+		}
+	}
+}

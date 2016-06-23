@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Pink</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style/style-min.css">
+	<script src="polyfills/picturefill-v3.0.2.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="page-wrap">
+		<div class="page-wrap__container">
+			//= template/header.html
+			//= template/intro.html
+			//= template/main.html
+			//= template/footer.html
+		</div>
+	</div>
+
+	<script src="script/main.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+		function initialize() {
+		  var mapProp = {
+		    center:new google.maps.LatLng(59.936356, 30.321096),
+		    zoom:15,
+		    scrollwheel: false,
+		    mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+		  var map=new google.maps.Map(document.getElementById("map"),mapProp);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBluWYhrVOGkd3Q4fmKfVElBQ6kCw_y0G4&callback=initMap"
+        async defer>
+    </script>
+</body>
+</html>

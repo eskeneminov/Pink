@@ -1,0 +1,164 @@
+.main__slider{
+}
+.slider-reviews__wrap{
+	@include makeContainer();
+	overflow: hidden;
+}
+.slider-reviews{
+	position: relative;
+
+	&__slides{
+		position: relative;
+		font-size: 0;
+		margin-bottom: 30px;
+		white-space: nowrap;
+	}
+	&__mobile{
+
+	}
+	&__arrows{
+
+	}
+}
+.slide-review{
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	white-space: normal;
+	text-align: center;
+	padding-top: 90px;
+
+	&__quote{
+		display: none;
+	}
+	&__text{
+		font-size: 14px;
+		line-height: 30px;
+		color: $navy-blue;
+		max-width: 600px;
+		margin: 0 auto;
+		min-height: 90px;
+	}
+	&__autor{
+		position: absolute;
+		top: 0;
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: $fw-bold;
+		text-align: center;
+		width: 100%;
+		margin-top: 50px;
+	}
+	&__occupation{
+		display: none;
+	}
+}
+.mobile-menu{
+	@include makeClearList();
+	text-align: center;
+
+	&__item{
+		@include makeClearItem();
+		display: inline-block;
+		margin-right: 10px;
+	}
+	&__button{
+		@include makeClearButton();
+		width: 20px;
+		height: 20px;
+		border: 4px solid $grey;
+		border-radius: 50%;
+		background: #bec2c7;
+	}
+	&__button_current{
+		border: 4px solid $navy-blue;
+		border-radius: 50%;
+		background: $white;
+	}
+}
+.arrows{
+	display: none;
+	@include makeClearList();
+	&__item{
+		@include makeClearItem();
+		display: inline-block;
+		vertical-align: top;
+	}
+	&__button{
+		@include makeClearButton();
+		position: absolute;
+		top: 50%;
+
+	}
+	&__button_left{
+		@include makeTriangle(30px, left, $grey);
+	}
+	&__button_right{
+		@include makeTriangle(30px, right, $grey);
+		right: 0;
+	}	
+}
+
+//Breakpoint 700px
+@include susy-breakpoint($sm-screen, 8){
+.slide-review{
+	padding-top: 70px;
+
+	&__quote{
+		display: none;
+	}
+	&__text{
+		font-size: 18px;
+		line-height: 30px;
+		color: $navy-blue;
+		max-width: 600px;
+	}
+	&__autor{
+		position: relative;
+		font-size: 20px;
+		line-height: 30px;
+		font-weight: $fw-bold;
+		text-align: center;
+		width: 100%;
+		margin-top: 40px;
+	}
+	&__occupation{
+		display: block;
+		margin: 0;
+		font-size: 14px;
+		line-height: 30px;
+		font-weight: $fw-narrow;
+		color: $navy-blue;
+	}
+}
+}
+
+//Breakpoint 970px
+@include susy-breakpoint($md-screen, 12){
+.arrows{
+	display: block;
+}
+.slide-review{
+
+	&__quote{
+		display: inline-block;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	&__text{
+		font-size: 18px;
+		line-height: 30px;
+		color: $navy-blue;
+		max-width: 600px;
+	}
+	&__autor{
+
+	}
+	&__occupation{
+		display: block;
+	}
+}
+}

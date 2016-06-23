@@ -1,0 +1,100 @@
+.main__effect{
+	display: none;
+}
+.effect{
+	@include container($container-max-width);
+}
+
+//Breakpoint 700px
+@include susy-breakpoint($sm-screen, 8){
+	.main__effect{
+		display: block;
+		padding-top: 60px;
+	}
+	.effect{
+		
+		&__timer{
+			@include span(4);
+			@include suffix(3%);
+		}
+		&__text-effect{
+			@include span(4);
+			margin-top: 30px;
+		}
+	}
+}
+.timer{
+	text-align: right;
+	&__pic{
+		max-width: 100%;
+	}
+}
+.text-effect{
+	padding-right: 45px;
+	padding-bottom: 10px;
+
+	&__title{
+		color: $black;
+		margin-bottom: 10px;
+		font-size: 30px;
+		line-height: 36px;
+		font-weight: $fw-bold;
+			& span{
+				display: block;
+			}
+	}
+	&__description{
+		font-size: 14px;
+		line-height: 24px;
+		color: $navy-blue;
+		margin-bottom: 14px;
+	}
+	&__link{
+		font-size: 14px;
+		line-height: 24px;
+		color: $pink;
+		text-decoration: underline;
+	}
+}
+
+//Breakpoint 970px
+@include susy-breakpoint($md-screen, 12){
+
+	.main__effect{
+		display: block;
+		padding-top: 70px;
+		padding-bottom: 60px;
+		background: $grey;
+	}
+
+	.effect{
+		
+		&__timer{
+			@include span(4);
+			@include suffix(3%);
+		}
+		&__text-effect{
+			@include span(8);
+		}
+	}
+.text-effect{
+	padding-left: 30px;
+
+	&__title{
+		line-height: 30px;
+		margin-bottom: 15px;
+			& span{
+				display: inline;
+			}
+	}
+	&__description{
+		font-size: 18px;
+		line-height: 30px;
+	}
+	&__link{
+		font-size: 18px;
+		font-weight: 30px;
+	}
+}	
+
+}

@@ -1,0 +1,194 @@
+@charset "utf-8";
+.main__price{
+	border-top: 1px solid transparent;
+}
+.price__shear{
+	position: relative;
+	margin-top: 140px;
+	background: $grey;
+	padding-bottom: 45px;
+	
+	&:before{
+		content: '';
+		position: absolute;
+		top: -80px;
+		width: 110%;
+		height: 200px;
+		background: $grey;
+		transform: rotate(-2.5deg);
+		z-index: -100;
+	}
+}
+.price__wrap{
+	@include makeContainer();
+	overflow: hidden;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.table-big{
+	display: none;
+}
+.slider-price-xs{
+
+	&__slides{
+		position: relative;
+		white-space: nowrap;
+		font-size: 0;
+	}
+	&__slide{
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+	}
+	&__mobile{
+		margin-top: 35px;
+	}
+}
+.mobile-menu-price{
+	@extend .mobile-menu; //extend from src/scss/blocks/slider_review.scss
+	
+	&__item{
+		@extend .mobile-menu__item;
+	}
+	&__button{
+		@extend .mobile-menu__button;
+	}
+	&__button_current{
+		@extend .mobile-menu__button_current;
+	}
+}
+.slide-xs{
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 14px;
+	line-height: 30px;
+
+	&__title{
+		padding-top: 20px;
+		text-align: center;
+		background: $navy-blue;
+		font-size: 18px;
+		font-weight: $fw-bold;
+		text-transform: uppercase;
+		color: $white;
+
+		& span{
+			display: block;
+			padding-bottom: 20px;
+			font-size: 24px;
+			text-transform: uppercase;
+			font-weight: $fw-narrow;
+		}
+	}
+	&__title_tape{
+		border-right: 2px solid $grey;
+		border-left: 2px solid $grey;
+	}
+	&__filter, &__smiles, &__comments{
+		position: relative;
+		border: 2px solid $grey;
+		background: $white;
+		text-transform: uppercase;
+		padding: 20px;
+		color: $navy-blue;
+	}
+	&__filter span, &__smiles span, &__comments span{
+		display: inline-block;
+		vertical-align: middle;
+		position: absolute;
+		right: 15px;
+		height: 30px;
+		width: 32px;
+		background-image: url("../img/spritesheet.png");
+	}
+}
+
+.sprite-check_no span, .sprite-check_no span, .sprite-check_no span {
+   	background-position: -76px -77px;;
+}
+.sprite-check_yes span, .sprite-check_yes span, .sprite-check_yes span {
+   	background-position: -122px -77px;
+}
+
+@include susy-breakpoint($sm-screen){
+	.price__wrap{
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.slider-price-xs{
+		display: none;
+	}
+	.table-big{
+		display: table;
+		width: 100%;
+		border-collapse: collapse;
+
+		&__title{
+			width: 25%;
+			padding-top: 20px;
+			text-align: center;
+			background: $navy-blue;
+			font-size: 16px;
+			line-height: 30px;
+			font-weight: $fw-bold;
+			text-transform: uppercase;
+			color: $white;
+			border: none;
+
+			& span{
+				display: block;
+				padding-bottom: 20px;
+				font-size: 18px;
+				line-height: 30px;
+				text-transform: uppercase;
+				font-weight: $fw-narrow;
+			}			
+		}
+		&__filter, &__smiles, &__comments{
+			border: 2px solid $grey;
+			background: $white;
+			text-transform: uppercase;
+			padding: 20px;
+			color: $navy-blue;
+		}
+		&__filter span, &__smiles span, &__comments span{
+			height: 30px;
+			width: 32px;
+			display: block;
+			margin: 0 auto;
+			background-image: url("../img/spritesheet.png");
+		}
+		&__title_tape{
+			border-right: 2px solid $grey;
+			border-left: 2px solid $grey;
+			position: relative;
+			overflow: hidden;
+
+			&:after{
+    			content: "Хит";
+    			display: inline-block;
+    			position: absolute;
+    			height: 30px;
+    			width: 110px;
+    			top: 6px;
+    			left: -25px;
+    			background: $pink;
+    			transform: rotate(-39.5deg);
+    			font-size: 14px;
+    			font-weight: $fw-normal;
+			}			
+		}
+		&__title_empty{
+			background: none;
+		}
+		&__filter{
+
+		}
+		&__smiles{
+
+		}
+		&__comments{
+
+		}
+	}
+}

@@ -1,0 +1,74 @@
+@mixin makeContainer($minWidth:$container-min-width, $maxWidth:$container-max-width){
+    margin: 0 auto;
+    max-width: $maxWidth;
+    min-width: $minWidth;
+}
+@mixin makeFloatLeft($pc: 33.333%){
+  float: left;
+  width: $pc;
+}
+@mixin makeClearfix() {
+  &:after, &:before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+@mixin makeClearList(){
+	padding: 0;
+	margin: 0;
+}
+@mixin makeClearItem(){
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+@mixin makeClearButton(){
+  outline: none;
+  background: none;
+  border: none;
+}
+@mixin makeBg($color){
+	background: $color;
+}
+@mixin makeBgOpacity($color, $opacity) {
+	background: fade-out($color, $opacity);
+}
+@mixin makeCenter($width){
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin makeTriangle($width, $dir, $color){
+  width:0;
+  height: 0;
+  @if $dir == 'down' {
+      border-top: $width/2 solid $color;
+      border-right: $width/2 solid transparent;
+      border-left: $width/2 solid transparent;
+    }
+  @else if $dir == 'up'{
+      border-bottom: $width/2 solid $color;
+      border-right: $width/2 solid transparent;
+      border-left: $width/2 solid transparent;
+    }
+  @else if $dir == 'right'{
+      border-left: $width/2 solid $color;
+      border-bottom: $width/2 solid transparent;
+      border-top: $width/2 solid transparent;
+    }
+  @else if $dir == 'left'{
+      border-right: $width/2 solid $color;
+      border-bottom: $width/2 solid transparent;
+      border-top: $width/2 solid transparent;
+    }
+}
+@mixin makeBgRetina($file, $retina, $path: '../img/') {
+  background-image: url($path + $file);
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+    & {
+      background-image: url($path + $retina);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+html{
+	font-family: $ff-base;
+	font-size: $fz-base;
+	color: $fc-base;
+	line-height: $lh-base;
+	background: $body-bg;
+}
+menu{
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+body{
+	margin: 0;
+}
+.page-wrap * {
+  box-sizing: border-box;
+}
+.page-wrap *:before,
+.page-wrap *:after {
+  box-sizing: border-box;
+}
+.page-wrap__container{
+	position: relative;
+	min-width: $container-min-width;
+	margin: 0 auto;
+}

@@ -1,0 +1,21 @@
+//Susy: 1)grid 2)settings 3)breakpoint-sass(bower_components)
+@import "grid/sass/susy";
+@import "grid/grid_settings.";
+@import "../../bower_components/breakpoint-sass/stylesheets/breakpoint";
+
+//Normalize
+@import 'vendors/normalize.scss';
+
+//Variables, mixins and scaffolding
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'base/scaffolding.scss';
+
+//Blocks 
+@import 'blocks/header.scss';
+@import 'blocks/intro.scss';
+@import 'blocks/features.scss';
+@import 'blocks/effect.scss';
+@import 'blocks/slider_review.scss';
+@import 'blocks/price_table.scss';
+@import 'blocks/footer.scss';
