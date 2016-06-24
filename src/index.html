@@ -4,9 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Pink</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>	
 	<link rel="stylesheet" href="style/style-min.css">
-	<script src="polyfills/picturefill-v3.0.2.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<script>
+    	document.createElement( "picture" );
+  	</script>
+	<script src="polyfills/picturefill-v3.0.2.js" async></script>
 </head>
 <body>
 	<div class="page-wrap">
@@ -17,9 +20,8 @@
 			//= template/footer.html
 		</div>
 	</div>
-
-	<script src="script/main.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="script/main.js"></script>
 	<script>
 		function initialize() {
 		  var mapProp = {
@@ -32,8 +34,6 @@
 		}
 		google.maps.event.addDomListener(window, 'load', initialize);
 	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBluWYhrVOGkd3Q4fmKfVElBQ6kCw_y0G4&callback=initMap"
-        async defer>
     </script>
 </body>
 </html>
