@@ -1,4 +1,6 @@
 (function() {
+	"use strict";
+
 	var m = $('.header__wrap');
 
 	m.toggleMenu = function () {
@@ -9,7 +11,7 @@
 		event.preventDefault();
 		m.item.removeClass('menu__item_current');
 		var toSection 		= $(this).attr('href'),
-			currentLink 	= m.link.index(this);
+			currentLink 	= m.link.index(this),
 			headerHeight 	= m.outerHeight(),
 			menuHeight 		= m.menu.outerHeight(),
 			topPosition 	= ((Math.round(($(toSection).offset().top))) - headerHeight);

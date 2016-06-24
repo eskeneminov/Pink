@@ -1,4 +1,6 @@
 (function() {
+	"use strict";
+	
 	var p = $('.slider-price-xs');
 
 	p.prepareForRun = function() {
