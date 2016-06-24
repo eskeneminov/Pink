@@ -7,6 +7,7 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	rigger = require('gulp-rigger'),
 	autoprefixer = require('gulp-autoprefixer'),
+    cmq = require('gulp-combine-media-queries'),
 	csso = require('gulp-csso'),
 	csscomb = require('gulp-csscomb'),
 	csslint = require('gulp-csslint'),
@@ -85,6 +86,9 @@ gulp.task('js:build', function () {
      .pipe(plumber())
      .on('error', sass.logError)
      .pipe(autoprefixer({ browsers: ['last 2 version', 'IE 10']}))
+     .pipe(cmq({
+        log: true
+      }))
      .pipe(csscomb())
      .pipe(gulp.dest(path.build.style))
      .pipe(rename('style-min.css'))
